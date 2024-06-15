@@ -14,12 +14,16 @@
 
     <header>
         <h1>ЧВК "Race of Killers"</h1>
-        <!-- Добавлена кнопка для перехода на другую страницу -->
-        <button class="group-button" onclick="location.href='https://www.roblox.com/groups/16013693/Race-of-killers#!/about'">Группа в РБ</button>
+        <!-- Ссылки для переключения между вкладками -->
+        <nav>
+            <a class="tab-link" href="#" data-tab="mercenaries">Наши наемники</a>
+            <a class="tab-link" href="#" data-tab="contractors">Контрактники</a>
+        </nav>
     </header>
 
     <main>
-        <section>
+        <!-- Содержимое вкладки "Наши наемники" -->
+        <section id="mercenaries" class="tab-content">
             <h2>Наши наемники</h2>
             <div class="mercenary">
                 <img src="https://i.ibb.co/2Sss1Ky/Screenshot-1.png" alt="Наемник 1">
@@ -31,7 +35,7 @@
             <div class="mercenary">
                 <img src="https://i.ibb.co/rmn8D2b/Screenshot-2.png" alt="Наемник 2">
                 <div class="mercenary-details">
-                    <h3>Viktor</h3>
+                    <h3>Victor</h3>
                     <p><strong>Биография:</strong></p>
                     <ul>
                         <li><strong>Цель:</strong> нету</li>
@@ -44,8 +48,14 @@
                 </div>
             </div>
             <div class="additional-info">
-                <img src="https://i.ibb.co/jVQpyKN/Race-of-killers-1-removebg-preview.png" alt="Дополнительная информация">
+                <img src="https://via.placeholder.com/150" alt="Дополнительная информация">
             </div>
+        </section>
+
+        <!-- Содержимое вкладки "Контрактники" -->
+        <section id="contractors" class="tab-content" style="display: none;">
+            <h2>Контрактники</h2>
+            <p>Информация о контрактниках...</p>
         </section>
     </main>
 
