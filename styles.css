@@ -3,14 +3,14 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    transition: background-color 0.3s ease; /* плавное переключение фона */
+    transition: background-color 0.3s ease;
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* выравнивание элементов по правому краю */
+    align-items: center;
 }
 
 body.dark-mode {
-    background-color: #333; /* тёмно-серый фон для темной темы */
+    background-color: #333;
     color: white;
 }
 
@@ -19,14 +19,23 @@ header {
     color: white;
     padding: 1rem;
     text-align: center;
-    width: 100%; /* расширение шапки на всю ширину */
-    box-sizing: border-box; /* учитываем padding в ширине */
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body.dark-mode header {
+    background-color: #222;
 }
 
 main {
     padding: 2rem;
-    width: 100%; /* контент на всю ширину */
-    box-sizing: border-box; /* учитываем padding в ширине */
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
 }
 
 section {
@@ -35,12 +44,19 @@ section {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
+    max-width: 800px;
+    width: 100%;
+}
+
+body.dark-mode section {
+    background-color: #444;
 }
 
 .mercenary {
     display: flex;
     align-items: center;
-    margin-bottom: 3rem; /* увеличенное расстояние между наемниками */
+    margin-bottom: 3rem;
+    width: 100%;
 }
 
 .mercenary img {
@@ -52,7 +68,7 @@ section {
 }
 
 .mercenary-details {
-    max-width: 600px;
+    flex: 1;
 }
 
 .mercenary-details h3 {
@@ -68,39 +84,20 @@ footer {
     color: white;
     text-align: center;
     padding: 1rem;
-    width: 100%; /* расширение подвала на всю ширину */
-    box-sizing: border-box; /* учитываем padding в ширине */
+    width: 100%;
+    box-sizing: border-box;
     position: fixed;
     bottom: 0;
-}
-
-/* Стили для темной темы */
-body.dark-mode {
-    background-color: #333; /* тёмно-серый фон для темной темы */
-    color: white;
-}
-
-body.dark-mode header {
-    background-color: #222;
-}
-
-body.dark-mode section {
-    background-color: #444; /* тёмно-серый фон для секций */
-}
-
-body.dark-mode .mercenary-details {
-    color: white;
 }
 
 body.dark-mode footer {
     background-color: #222;
 }
 
-/* Стили для переключателя тем */
 .theme-toggle {
     position: absolute;
     top: 1rem;
-    right: 1rem; /* расположение переключателя справа */
+    right: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -108,14 +105,14 @@ body.dark-mode footer {
 }
 
 .theme-toggle input {
-    display: none; /* скрытие оригинального чекбокса */
+    display: none;
 }
 
 .theme-toggle .toggle-label {
     width: 40px;
     height: 40px;
-    border-radius: 50%; /* круглая форма */
-    background-color: #ddd; /* цвет фона переключателя */
+    border-radius: 50%;
+    background-color: #ddd;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -124,22 +121,23 @@ body.dark-mode footer {
 }
 
 .theme-toggle .toggle-label::after {
-    content: 'Тёмная тема'; /* текст под переключателем */
+    content: 'Тёмная тема';
     font-size: 12px;
     margin-top: 4px;
     text-align: center;
 }
 
 .theme-toggle input:checked + .toggle-label {
-    background-color: #555; /* цвет фона при активной темной теме */
+    background-color: #555;
     color: white;
 }
 
-/* Стили для картинки под списком наёмников */
 .additional-info {
     display: flex;
     align-items: center;
     margin-top: 2rem;
+    width: 100%;
+    max-width: 800px;
 }
 
 .additional-info img {
@@ -151,4 +149,23 @@ body.dark-mode footer {
 .additional-info p {
     font-size: 14px;
     line-height: 1.6;
+}
+
+.group-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.group-button:hover {
+    background-color: #0056b3;
 }
