@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const tabLinks = document.querySelectorAll('.tab-link');
     const tabContents = document.querySelectorAll('.tab-content');
 
-    // Проверяем текущую тему при загрузке страницы
+    // Проверяем и применяем сохраненную тему при загрузке страницы
     if (localStorage.getItem('theme') === 'dark') {
         document.body.classList.add('dark-mode');
         themeToggle.checked = true;
