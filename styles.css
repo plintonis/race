@@ -21,9 +21,6 @@ header {
     text-align: center;
     width: 100%;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 body.dark-mode header {
@@ -86,8 +83,6 @@ footer {
     padding: 1rem;
     width: 100%;
     box-sizing: border-box;
-    position: fixed;
-    bottom: 0;
 }
 
 body.dark-mode footer {
@@ -168,4 +163,24 @@ body.dark-mode footer {
 
 .group-button:hover {
     background-color: #0056b3;
+}
+
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #007bff;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
 }
