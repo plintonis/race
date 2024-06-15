@@ -20,4 +20,135 @@ header {
     padding: 1rem;
     text-align: center;
     width: 100%; /* расширение шапки на всю ширину */
-    box-sizing
+    box-sizing: border-box; /* учитываем padding в ширине */
+}
+
+main {
+    padding: 2rem;
+    width: 100%; /* контент на всю ширину */
+    box-sizing: border-box; /* учитываем padding в ширине */
+}
+
+section {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.mercenary {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem; /* увеличенное расстояние между наемниками */
+}
+
+.mercenary img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 2rem;
+}
+
+.mercenary-details {
+    max-width: 600px;
+}
+
+.mercenary-details h3 {
+    margin-bottom: 0.5rem;
+}
+
+.mercenary-details p {
+    margin: 0.5rem 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    width: 100%; /* расширение подвала на всю ширину */
+    box-sizing: border-box; /* учитываем padding в ширине */
+    position: fixed;
+    bottom: 0;
+}
+
+/* Стили для темной темы */
+body.dark-mode {
+    background-color: #333; /* тёмно-серый фон для темной темы */
+    color: white;
+}
+
+body.dark-mode header {
+    background-color: #222;
+}
+
+body.dark-mode section {
+    background-color: #444; /* тёмно-серый фон для секций */
+}
+
+body.dark-mode .mercenary-details {
+    color: white;
+}
+
+body.dark-mode footer {
+    background-color: #222;
+}
+
+/* Стили для переключателя тем */
+.theme-toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem; /* расположение переключателя справа */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.theme-toggle input {
+    display: none; /* скрытие оригинального чекбокса */
+}
+
+.theme-toggle .toggle-label {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* круглая форма */
+    background-color: #ddd; /* цвет фона переключателя */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.theme-toggle .toggle-label::after {
+    content: 'Тёмная тема'; /* текст под переключателем */
+    font-size: 12px;
+    margin-top: 4px;
+    text-align: center;
+}
+
+.theme-toggle input:checked + .toggle-label {
+    background-color: #555; /* цвет фона при активной темной теме */
+    color: white;
+}
+
+/* Стили для картинки под списком наёмников */
+.additional-info {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.additional-info img {
+    width: 150px;
+    height: auto;
+    margin-right: 1rem;
+}
+
+.additional-info p {
+    font-size: 14px;
+    line-height: 1.6;
+}
